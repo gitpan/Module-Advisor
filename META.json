@@ -32,14 +32,15 @@
       },
       "runtime" : {
          "requires" : {
-            "parent" : "0"
+            "parent" : "0",
+            "perl" : "5.008008"
          }
       }
    },
    "provides" : {
       "Module::Advisor" : {
          "file" : "lib/Module/Advisor.pm",
-         "version" : "0.07"
+         "version" : "0.08"
       }
    },
    "release_status" : "stable",
@@ -48,5 +49,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.07"
+   "version" : "0.08"
 }
