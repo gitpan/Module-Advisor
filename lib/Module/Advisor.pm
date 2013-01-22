@@ -2,7 +2,7 @@ package Module::Advisor;
 use strict;
 use warnings;
 use 5.008008;
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 use version;
 use ExtUtils::MakeMaker;
 use Carp;
@@ -41,6 +41,7 @@ our @BUG = (
     ['Template' => '2.15', 'uri filter does not works properly https://rt.cpan.org/Public/Bug/Display.html?id=19593'],
     ['HTML::FillInForm::Lite' => '1.11', 'HTML5 style tags support'],
     ['Proc::Daemon' => '0.12', 'Init() did not close all filehandles reliably in some cases.'],
+    ['ExclusiveLock::Guard' => '0.04', 'change of the file stat timing (measures under high load)'],
 );
 
 our @BROKEN = (
