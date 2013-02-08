@@ -32,6 +32,8 @@
       },
       "runtime" : {
          "requires" : {
+            "CPAN::Meta::Requirements" : "2.122",
+            "Module::Metadata" : "1.000000",
             "parent" : "0",
             "perl" : "5.008008"
          }
@@ -40,7 +42,7 @@
    "provides" : {
       "Module::Advisor" : {
          "file" : "lib/Module/Advisor.pm",
-         "version" : "0.10"
+         "version" : "0.11"
       }
    },
    "release_status" : "stable",
@@ -49,5 +51,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.10"
+   "version" : "0.11"
 }

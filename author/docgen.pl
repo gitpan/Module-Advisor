@@ -8,8 +8,25 @@ use Text::MicroTemplate qw/render_mt/;
 use lib 'lib';
 use Module::Advisor;
 
+our %pod_escape_table = ('>' => 'E<gt>', '<' => 'E<lt>');
+
+sub escape_pod {
+    my ($variable) = @_;
+
+    my $source = qq{
+        do{
+            $variable =~ s/([><])/\$::pod_escape_table{\$1}/ge;
+            $variable;
+        }
+    };
+    $source =~ s/\n//g; # to keep line numbers
+    return $source;
+}
+
 my $tmpl = join '', <DATA>;
-my $result = render_mt($tmpl);
+my $render = Text::MicroTemplate->new(template => $tmpl,
+                                      escape_func => \&escape_pod);
+my $result = $render->build->();
 print $result;
 
 __DATA__
@@ -48,7 +65,7 @@ Here is a rules to check the modules.
 =over 4
 
 ? for my $module (@Module::Advisor::SECURITY) {
-=item <?= $module->[0] ?> <= <?= $module->[1] ?>
+=item <?= $module->[0] ?> <?= $module->[1] ?>
 
 <?= $module->[2] ?>
 
@@ -62,7 +79,7 @@ Here is a rules to check the modules.
 
 ? for my $module (@Module::Advisor::PERFORMANCE) {
 
-=item <?= $module->[0] ?> <= <?= $module->[1] ?>
+=item <?= $module->[0] ?> <?= $module->[1] ?>
 
 <?= $module->[2] ?>
 
@@ -76,7 +93,7 @@ Here is a rules to check the modules.
 
 ? for my $module (@Module::Advisor::BUG) {
 
-=item <?= $module->[0] ?> <= <?= $module->[1] ?>
+=item <?= $module->[0] ?> <?= $module->[1] ?>
 
 <?= $module->[2] ?>
 
@@ -118,7 +135,7 @@ If you are using <?= $module->[0] ?>.
 
 ? for my $module (@Module::Advisor::FEATURE) {
 
-=item <?= $module->[0] ?> <= <?= $module->[1] ?> does not have
+=item <?= $module->[0] ?> <?= $module->[1] ?> does not have
 
 <?= $module->[2] ?>
 
