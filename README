@@ -120,6 +120,9 @@ RULES
         http://weblog.bulknews.net/post/33907905561/do-not-ship-modules-with
         -module-install-1-04
 
+    Mouse 1.04 has bug.
+        memory leak, http://d.hatena.ne.jp/gfx/20130208/1360283357
+
   Recommended XS module for better performance
     JSON::XS is recommended
         If you are using JSON.
