@@ -2,7 +2,7 @@ package Module::Advisor;
 use strict;
 use warnings;
 use 5.008008;
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 use Module::Metadata;
 use CPAN::Meta::Requirements;
 use Carp;
@@ -10,6 +10,7 @@ use Carp;
 our @SECURITY = (
     ['Digest' => '< 1.17', 'have a security issue. which could lead to the injection of arbitrary Perl code'],
     ['Encode' => '< 2.44', 'heap overflow'],
+    ['Encode' => '< 2.49', 'memory leaks'],
 );
 
 our @PERFORMANCE = (

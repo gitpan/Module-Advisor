@@ -20,7 +20,7 @@ no_index:
 provides:
   Module::Advisor:
     file: lib/Module/Advisor.pm
-    version: 0.11
+    version: 0.12
 requires:
   CPAN::Meta::Requirements: 2.122
   Module::Metadata: 1.000000
@@ -28,4 +28,4 @@ requires:
   perl: 5.008008
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.11
+version: 0.12

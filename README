@@ -23,6 +23,9 @@ RULES
     Encode < 2.44
         heap overflow
 
+    Encode < 2.49
+        memory leaks
+
   Modules have performance improvements
     UNIVERSAL::require < 0.11
         is 400% faster
