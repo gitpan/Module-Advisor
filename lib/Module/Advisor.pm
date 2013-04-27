@@ -2,7 +2,7 @@ package Module::Advisor;
 use strict;
 use warnings;
 use 5.008008;
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 use Module::Metadata;
 use CPAN::Meta::Requirements;
 use Carp;
@@ -67,6 +67,7 @@ our @FEATURE = (
     ['Log::Minimal' => '< 0.03', 'ddf'],
     ['Proclet' => '< 0.12', 'Proclet::Declare'],
     ['DBI', '< 1.614' => 'AutoInactiveDestroy'],
+    ['Module::Install::XSUtil', '< 0.44' => 'PUREPERL_ONLY=1'],
 );
 
 our @OPTIONAL_MODULES = (

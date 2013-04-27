@@ -1,31 +1,46 @@
 ---
 abstract: 'check a modules you are installed'
 author:
-  - 'Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>'
+  - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>'
 build_requires:
   Test::More: 0.98
   Test::Requires: 0
 configure_requires:
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
-license: perl
+generated_by: 'Minilla/v0.0.56, CPAN::Meta::Converter version 2.130880'
+license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Module-Advisor
 no_index:
   directory:
+    - t
+    - xt
     - inc
+    - share
+    - eg
+    - examples
+    - author
 provides:
   Module::Advisor:
     file: lib/Module/Advisor.pm
-    version: 0.12
+    version: 0.13
 requires:
   CPAN::Meta::Requirements: 2.122
   Module::Metadata: 1.000000
   parent: 0
   perl: 5.008008
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.12
+  bugtracker: https://github.com/tokuhirom/Module-Advisor/issues
+  homepage: https://github.com/tokuhirom/Module-Advisor
+  repository: git://github.com/tokuhirom/Module-Advisor.git
+version: 0.13
+x_contributors:
+  - 'Daisuke Murase <typester@cpan.org>'
+  - 'Syohei YOSHIDA <syohex@gmail.com>'
+  - 'Tatsuhiko Miyagawa <miyagawa@bulknews.net>'
+  - 'tokuhirom <tokuhirom@gmail.com>'
