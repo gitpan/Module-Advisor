@@ -2,7 +2,7 @@ package Module::Advisor;
 use strict;
 use warnings;
 use 5.008008;
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 use Module::Metadata;
 use CPAN::Meta::Requirements;
 use Carp;
@@ -21,9 +21,11 @@ our @BUG = (
     ['Plack' => '< 0.9982', 'sanity check to remove newlines from headers'],
     ['Time::Piece' => '< 1.16', 'have timezone related issue'],
     ['DBD::SQLite' => '< 1.20', 'a lot of bugs.'],
+    ['Mouse' => '>= 1.07, < 1.12', 'Memory leaks in trigger'],
     ['Text::Xslate' => '< 1.0011', '&apos; bug.'],
     ['Text::Xslate' => '< 1.5021', 'segv in "render" recursion call'],
     ['Text::Xslate' => '< 1.6001', 'possibly memory leaks on VM stack frames. see https://github.com/xslate/p5-Text-Xslate/issues/71'],
+    ['Text::Xslate' => '< 2.0005', 'Nested WRAPPER broken https://github.com/xslate/p5-Text-Xslate/issues/79'],
     ['Furl' => '< 0.39', 'unexpected eof in reading chunked body. It makes busy loop.'],
     ['AnyEvent::MPRPC' => '< 0.15', 'switch to Data::MessagePack::Stream'],
     ['Data::MessagePack' => '< 0.46', 'fixed unpacking issue on big-endian system.'],
