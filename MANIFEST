@@ -8,6 +8,7 @@ cpanfile
 lib/Module/Advisor.pm
 lib/Module/Advisor.pod
 minil.toml
+script/module-advisor
 t/00_compile.t
 xt/02_perlcritic.t
 META.yml

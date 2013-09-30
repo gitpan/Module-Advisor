@@ -1,5 +1,5 @@
 ---
-abstract: 'check a modules you are installed'
+abstract: 'check locally installed modules for known problems'
 author:
   - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>'
 build_requires:
@@ -28,7 +28,7 @@ no_index:
 provides:
   Module::Advisor:
     file: lib/Module/Advisor.pm
-    version: 0.15
+    version: 0.16
 requires:
   CPAN::Meta::Requirements: 2.122
   Module::Metadata: 1.000000
@@ -38,9 +38,10 @@ resources:
   bugtracker: https://github.com/tokuhirom/Module-Advisor/issues
   homepage: https://github.com/tokuhirom/Module-Advisor
   repository: git://github.com/tokuhirom/Module-Advisor.git
-version: 0.15
+version: 0.16
 x_contributors:
   - 'Daisuke Murase <typester@cpan.org>'
   - 'Syohei YOSHIDA <syohex@gmail.com>'
   - 'Tatsuhiko Miyagawa <miyagawa@bulknews.net>'
-  - 'tokuhirom <tokuhirom@gmail.com>'
+  - 'Neil Bowers <neil@bowers.com>'
+  - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
