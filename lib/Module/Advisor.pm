@@ -2,7 +2,7 @@ package Module::Advisor;
 use strict;
 use warnings;
 use 5.008008;
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 use Module::Metadata;
 use CPAN::Meta::Requirements;
 use Carp;
@@ -52,6 +52,7 @@ our @BUG = (
     ['Math::Random::MT' => '== 1.15', 'rand() took no notice of argument RT #78200'],
     ['Module::Install' => '== 1.04', 'Broken, http://weblog.bulknews.net/post/33907905561/do-not-ship-modules-with-module-install-1-04'],
     ['Mouse' => '== 1.04', 'Broken, http://d.hatena.ne.jp/gfx/20130208/1360283357'],
+    ['Plack::Middleware::AxsLog' => '== 0.20', 'Missing \n'],
 );
 
 our @XS = (

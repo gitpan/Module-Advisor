@@ -1,10 +1,10 @@
 {
-   "abstract" : "check locally installed modules for known problems",
+   "abstract" : "check a modules you are installed",
    "author" : [
       "Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.6.7",
+   "generated_by" : "Minilla/v0.11.0",
    "license" : [
       "unknown"
    ],
@@ -21,7 +21,8 @@
          "share",
          "eg",
          "examples",
-         "author"
+         "author",
+         "builder"
       ]
    },
    "prereqs" : {
@@ -58,7 +59,7 @@
    "provides" : {
       "Module::Advisor" : {
          "file" : "lib/Module/Advisor.pm",
-         "version" : "0.16"
+         "version" : "0.17"
       }
    },
    "release_status" : "stable",
@@ -72,7 +73,7 @@
          "web" : "https://github.com/tokuhirom/Module-Advisor"
       }
    },
-   "version" : "0.16",
+   "version" : "0.17",
    "x_contributors" : [
       "Daisuke Murase <typester@cpan.org>",
       "Syohei YOSHIDA <syohex@gmail.com>",

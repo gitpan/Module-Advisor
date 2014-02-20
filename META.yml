@@ -1,5 +1,5 @@
 ---
-abstract: 'check locally installed modules for known problems'
+abstract: 'check a modules you are installed'
 author:
   - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>'
 build_requires:
@@ -10,7 +10,7 @@ configure_requires:
   CPAN::Meta::Prereqs: 0
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Minilla/v0.6.7, CPAN::Meta::Converter version 2.132510'
+generated_by: 'Minilla/v0.11.0, CPAN::Meta::Converter version 2.133380'
 license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,10 +25,11 @@ no_index:
     - eg
     - examples
     - author
+    - builder
 provides:
   Module::Advisor:
     file: lib/Module/Advisor.pm
-    version: 0.16
+    version: 0.17
 requires:
   CPAN::Meta::Requirements: 2.122
   Module::Metadata: 1.000000
@@ -38,7 +39,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/Module-Advisor/issues
   homepage: https://github.com/tokuhirom/Module-Advisor
   repository: git://github.com/tokuhirom/Module-Advisor.git
-version: 0.16
+version: 0.17
 x_contributors:
   - 'Daisuke Murase <typester@cpan.org>'
   - 'Syohei YOSHIDA <syohex@gmail.com>'
